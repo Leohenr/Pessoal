@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00C9FBAC-6BEB-47FD-BE14-85F01AC7B60F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Burger_Manager</RootNamespace>
+    <AssemblyName>Burger_Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hamburger.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcessoBD.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Delivery.cs" />
+    <Compile Include="frmCProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCProduto.Designer.cs">
+      <DependentUpon>frmCProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="frmAndamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAndamento.Designer.cs">
+      <DependentUpon>frmAndamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCCliente.Designer.cs">
+      <DependentUpon>frmCCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCFuncionarios.Designer.cs">
+      <DependentUpon>frmCFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDelivery.Designer.cs">
+      <DependentUpon>frmDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPCliente.Designer.cs">
+      <DependentUpon>frmPCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPFuncionario.Designer.cs">
+      <DependentUpon>frmPFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPProduto.Designer.cs">
+      <DependentUpon>frmPProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Produto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Situacao.cs" />
+    <EmbeddedResource Include="frmAndamento.resx">
+      <DependentUpon>frmAndamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCCliente.resx">
+      <DependentUpon>frmCCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCFuncionarios.resx">
+      <DependentUpon>frmCFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCProduto.resx">
+      <DependentUpon>frmCProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDelivery.resx">
+      <DependentUpon>frmDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPCliente.resx">
+      <DependentUpon>frmPCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPFuncionario.resx">
+      <DependentUpon>frmPFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPProduto.resx">
+      <DependentUpon>frmPProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-gnd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-peq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-gnd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-peq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadeado-gnd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios-gnd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hamburger.ico" />
+    <None Include="Resources\LOGO SYSTEM MANAGER.jpg" />
+    <None Include="Resources\1455762291_exit.png" />
+    <None Include="Resources\1455762274_19.png" />
+    <None Include="Resources\121.png" />
+    <None Include="Resources\21.png" />
+    <None Include="Resources\situação.png" />
+    <None Include="Resources\1455761997_Business_People_01.png" />
+    <None Include="Resources\1455761929_fast-food.png" />
+    <None Include="Resources\1455761889_fast-food.png" />
+    <None Include="Resources\1455761862_fast-food.png" />
+    <None Include="Resources\1455761745_Business_People_01.png" />
+    <None Include="Resources\1455761677_emblem-people.png" />
+    <None Include="Resources\1455758405_shopping-add1.png" />
+    <None Include="Resources\1455760722_shopping-add.png" />
+    <None Include="Resources\1455759824_Manager.png" />
+    <None Include="Resources\1455759710_Manager.png" />
+    <None Include="Resources\1455759460_Manager.png" />
+    <None Include="Resources\1455758420_emblem-people.png" />
+    <None Include="Resources\1455758405_shopping-add.png" />
+    <None Include="Resources\1455756670_Manager.png" />
+    <None Include="Resources\1455337589_kuser.png" />
+    <None Include="Resources\1455336976_new.png" />
+    <None Include="Resources\1455336727_ChirstmaxShop_basket.png" />
+    <None Include="Resources\1455336575_Information.png" />
+    <None Include="Resources\1455336459_secure-server-px-png.png" />
+    <None Include="Resources\1455336418_user.png" />
+    <None Include="Resources\locker.png" />
+    <None Include="Resources\math-minus-icon.png" />
+    <None Include="Resources\add-icon.png" />
+    <None Include="Resources\address_book_delete.png" />
+    <None Include="Resources\address_book_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
